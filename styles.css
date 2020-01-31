@@ -1,0 +1,145 @@
+/* GLOBAL STYLES */
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    background-color: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+}
+
+/* NAVBAR STYLES */
+
+.blockNavbar{
+    display: grid;
+    padding: 2rem;
+}
+
+.blockNavbar__logo{
+    width: 7rem;
+}
+
+/* HERO STYLES */
+
+.blockHero{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* HEADER AND DESCRIPTION STYLES */
+
+.blockText{
+    display: grid;
+    margin-bottom: 1rem;
+}
+
+.blockText__header{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    padding: 5%;    
+    font-size: 42px;
+    text-align: center;
+}
+
+.blockText__header-softRed{
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+
+.blockText__header-black{
+    color: hsl(0, 6%, 24%);
+}
+
+.blockText__paragraph{
+    padding: 5%;
+    text-align: center;
+    color: hsl(0, 36%, 70%);
+    line-height: 20px;
+}
+
+/* FORM STYLES */
+
+.blockForm{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem;
+}
+
+.blockForm__input{
+    padding: 0.8rem 8rem 0.8rem 1.2rem;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 25px;
+    vertical-align: top;
+}
+
+.blockForm__input::placeholder{
+    color: hsl(0, 36%, 70%);
+    opacity: 0.8;
+}
+
+.blockForm__button{
+    border: none;
+    margin-left: -45px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 10px 30px 10px 30px;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-radius: 25px;
+}
+
+@media (min-width: 1440px) {
+    
+    body {
+        font-size: 18px;
+    }
+    .desktop{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 12%;
+        height: 100%;
+    }
+    .blockNavbar{
+        margin-left: 7rem;
+    }
+
+    .blockGeneral{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+    }
+    .blockText__header{
+        padding-left: 8rem;
+        padding-right: 18rem;
+        text-align: left;
+        font-size: 4.5rem;
+        
+    }
+    .blockText__paragraph{
+        padding-left: 8rem;
+        padding-right: 14.5rem;
+        text-align: left;
+        line-height: 2rem;
+    }
+
+    .blockForm{
+        justify-content: left;
+        padding-left: 8rem;
+    }
+
+    .blockHero{
+        grid-row-start: 1;
+        grid-row-end: 3 ;
+        grid-column-start: 0;
+        grid-column-end: 4;  
+        margin-bottom: 0%;
+    }
+
+    .blockHero__image{
+        content:url("./images/hero-desktop.jpg");
+    }
+
+}
